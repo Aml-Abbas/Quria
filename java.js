@@ -13,12 +13,18 @@ function getIdFromParam() {
     var itemIdP = document.getElementById("item-id");
     var itemId = getParameterByName('itemId');
     itemIdP.textContent = `item id: ${getParameterByName('itemId')}`;
-    createLink(itemId);
+ //   createLink(itemId);
 }; 
+function openAppen(){
+    var itemId = document.getElementById("item-id-input").value;
+
+    location.href = "androidrfid://primaryid?itemid=" + itemId;
+
+}
 
 
 
- function createLink(itemId) {
+/*  function createLink(itemId) {
     androiduri = "androidrfid://primaryid?itemid=" + itemId;
     var aTag = document.getElementById("link");
     aTag.setAttribute("href", androiduri);
@@ -29,4 +35,4 @@ function writeToTag() {
     var itemIdP = document.getElementById("item-id");
     itemIdP.textContent = `item id: ` + itemId;
     createLink(itemId);
-}
+} */
