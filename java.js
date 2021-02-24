@@ -20,9 +20,8 @@ function getIdFromParam() {
 
  function createLink(itemId) {
     androiduri = "androidrfid://primaryid?itemid=" + itemId;
-
-  //  var aTag = document.getElementById("link");
-   // aTag.setAttribute("href", androiduri);
+    var aTag = document.getElementById("link");
+    aTag.setAttribute("href", androiduri);
 } 
 
 function writeToTag() {
@@ -30,8 +29,4 @@ function writeToTag() {
     var itemIdP = document.getElementById("item-id");
     itemIdP.textContent = `item id: ` + itemId;
     createLink(itemId);
-}
-
-function getItemId(){
-    return document.getElementById("item-id-input").value;
 }
