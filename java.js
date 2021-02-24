@@ -23,7 +23,7 @@ function getIdFromParam() {
 
     var buttonP = document.getElementById("btn");
     buttonP.textContent = `<button class="button button5 w3-bar-item w3-button"><a href=` + androiduri+ `>Write</a></button>;`;
-    
+
   //  var aTag = document.getElementById("link");
    // aTag.setAttribute("href", androiduri);
 } 
@@ -33,4 +33,8 @@ function writeToTag() {
     var itemIdP = document.getElementById("item-id");
     itemIdP.textContent = `item id: ` + itemId;
     createLink(itemId);
+}
+
+function getItemId(){
+    return document.getElementById("item-id-input").value;
 }
